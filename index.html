@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>ArcGIS JSAPI Babel</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.4/esri/css/main.css">
+  <link rel="stylesheet" href="main.css">
+  <script>
+    var locationPath = location.pathname.replace(/\/[^\/]+$/, "");
+    window.dojoConfig = {
+      packages: [
+        {
+          name: "app",
+          location: locationPath + "/dist"
+        }
+      ]
+    };
+  </script>
+  <script src="https://js.arcgis.com/4.4/"></script>
+</head>
+
+<body>
+	<div id="viewDiv"></div>
+  <script>require(["app/main"]);</script>
+</body>
+
+</html>
